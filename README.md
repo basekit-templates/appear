@@ -1,2 +1,4 @@
-# appear
-Basekit V8 Template
+Apparel
+=========
+
+BaseKit eCommerce Template
