@@ -1,4 +1,4 @@
-Apparel
+Appear
 =========
 
-BaseKit eCommerce Template
+Basekit v8 Template
