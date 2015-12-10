@@ -511,6 +511,9 @@
     width: 110px;
     margin-top: -24px;
     height: 50px;
+    @media @tablet {
+        width: 70px;
+    }
 }
 
 .responsiveslideshow__pause-toggle {
@@ -634,6 +637,9 @@
 .responsiveslideshow__pause-toggle {
     background-color: @color-swatch3;
     color: @color__button--text;
+    @media @mobile {
+        background-color: fade(@color-swatch3,10%);
+    }
 }
 
 
