@@ -2,8 +2,10 @@
 <header class="template-header">
     <div class="header-wrapper">
         <div class="headercontent-wrapper">
-            <div class="header-companyname">
+            <div class="header-logo">
                 {{widget('logo', 'sitelogo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            </div>
+            <div class="header-companyname">
                 {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
             </div>
             <div class="header-extendednavigation">
