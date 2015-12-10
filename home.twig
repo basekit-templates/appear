@@ -7,6 +7,7 @@
 <div class="profile-header">
     <div class="header-wrapper">
         <div class="widgetcontent-left">
+            {{widget('logo', 'sitelogo', {"defaultlogo": asset('images/logo.png')})|raw}}
             {{widget('content', 'widgetcontentleft', {content: '<p>Lorem ipsum dolor sit amet</p>'})|raw}}
         </div>
         <div class="widgetprofile-right">
@@ -48,22 +49,6 @@
 	      }
 	    ]
 	})|raw}}
-</div>
-
-<div class="logo-banner">
-   	<div class="header-wrapper">
-      	<div class="logo-banner-left">
-          	{{widget('content', 'logobannerleft1', {content: '<h1>Lorem ipsum dolor sit amet</h1>'})|raw}}
-          	{{widget('content', 'logobannerleft2', {content: '<h4>Lorem ipsum dolor sit amet</h4>'})|raw}}
-      	</div>
-      	<div class="logo-banner-center">
-      	    {{widget('logo', 'sitelogo', {"defaultlogo": asset('images/logo.png')})|raw}}
-      	</div>
-      	<div class="logo-banner-right">
-      	    {{widget('content', 'logobannerright1', {content: '<h1>Lorem ipsum dolor sit amet</h1>'})|raw}}
-      	    {{widget('content', 'logobannerright2', {content: '<h4>Lorem ipsum dolor sit amet</h4>'})|raw}}
-      	</div>
-   	</div>
 </div>
 
 	<!-- Page Content -->
