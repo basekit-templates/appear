@@ -133,8 +133,7 @@
 
 .navigation-list--children, 
 .default-page .navigation-list--children {
-	background-color:@color-swatch1;
-	border: 1px solid @color-swatch7;
+	background-color: lighten(@color-swatch3, 30%);
     z-index: 99999;
 	.navigation__item-name {
 		color:@color__feature-strapline--text;
@@ -149,13 +148,6 @@
 			display: block;
 		}
 	}
-}
-
-.navigation-list--children .item-name {
-    color: @color-swatch3!important;
-    &:hover {
-        color: @color-swatch2!important
-    }
 }
 
 
