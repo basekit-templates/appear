@@ -240,8 +240,6 @@
             "color__slideshow-description--text": "@font-swatch9-color"
         }, 
         "blog": {
-            "color__blogsearch--background": "@color-swatch7",
-            "color__blogsearch-legend--text": "@color-swatch4",
             "color__blogpostlist-article--background": "@color-swatch7",
             "color__blogpostlist-title--text": "@font-swatch4-color",
             "color__blogpost-article--background": "@color-swatch7",
