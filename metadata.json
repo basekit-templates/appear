@@ -15,7 +15,7 @@
     "colorSwatches":
     {
         "Swatch 1": {
-            "color1":"#FFFFFF",
+            "color1":"#EDEDED",
             "color2":"#ca1414",
             "color3":"#000000",
             "color4":"#2b3040",
@@ -213,8 +213,8 @@
         },
         "navigation": {
             "color__navigation--text": "@font-swatch6-color",
-            "color__navigation--text--hover": "@font-swatch6-color",
-            "color__navigation--text--selected": "@color__secondary",
+            "color__navigation--text--hover": "darken(@font-swatch6-color,40%)",
+            "color__navigation--text--selected": "darken(@font-swatch6-color,40%)",
             "font__navigation--font-family" : "@font-swatch6-font-family",
             "font__navigation--font-size" : "@font-swatch6-font-size",
             "font__navigation--font-weight" : "@font-swatch6-font-weight",
