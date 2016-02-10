@@ -6,11 +6,11 @@
     "templateType":"standard",
     "widgetVersion":2,
     "images":[
+        "images/image-1.jpg",
         "images/slideshow/slideshow-1.jpg",
         "images/slideshow/slideshow-2.jpg",
         "images/slideshow/slideshow-3.jpg",
-        "images/logo.png",
-        "images/image-1.jpg"
+        "images/logo.png"
     ],
     "colorSwatches":
     {
