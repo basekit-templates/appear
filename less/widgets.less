@@ -694,8 +694,12 @@ input.input[type=search],
 // Advanced Contact Form
 .advancedcontactform__form {
     padding: 40px;
+    @media @mobile {
+        padding: 40px 0px;
+    }
 }
 
+.option-item--radio, 
 .option-item--checkbox {
     display: block;
 }
