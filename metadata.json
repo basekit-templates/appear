@@ -240,15 +240,11 @@
             "color__slideshow-description--text": "@font-swatch9-color"
         }, 
         "blog": {
-            "color__blogpostlist-article--background": "@color-swatch7",
             "color__blogpostlist-title--text": "@font-swatch4-color",
-            "color__blogpost-article--background": "@color-swatch7",
             "color__blogpost-title--text": "@font-swatch4-color"
         },
         "ecommerce": {
-            "color__ecomproductslist-filters--background": "@color-swatch7",
             "color__ecomproductslist-label--text": "@color-swatch4",
-            "color__ecomproductslist-product-item--background": "@color-swatch1",
             "color__ecomproductslist-product-title--text": "@color-swatch4",
             "color__ecomproduct--background": "@color-swatch7",
             "color__ecomproduct-title--text": "@font-swatch4-color",
