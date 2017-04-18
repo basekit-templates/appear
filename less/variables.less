@@ -143,9 +143,12 @@ form,
 }
 
 .ecombasket {
-	background-color: @color__ecombasket--background;
-	&__button {
+	&__basket-toggle {
 		background-color: @color__ecombasket-button--background;
 		color: @color__ecombasket-button--text;
+
+		@media @tablet {
+			width: 100%;
+		}
 	}
 }
