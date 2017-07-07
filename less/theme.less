@@ -19,13 +19,16 @@
 .template-footer {
 	.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
 	min-height: 80px;
-	background-color: @color-swatch3;
 	// Tablet: reduce height
+}
+
+.template-header {
+    background-color: @color__header--background;
 }
 
 .profile-header,
 .logo-banner {
-    background-color: @color-swatch7;
+    background-color: @color__container--background;
     @media @tablet {
         text-align: center;
     }
@@ -199,7 +202,7 @@
 
 .template-footer {
 	min-height: 100px;
-	background-color: @color-swatch3;
+	background-color: @color__footer--background;
 	text-align: center;
 	color: #ffffff;
 	// Change heading elements to white
