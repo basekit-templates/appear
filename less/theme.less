@@ -17,18 +17,15 @@
 
 .template-header,
 .template-footer {
-	.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
-	min-height: 80px;
-	// Tablet: reduce height
-}
-
-.template-header {
-    background-color: @color__header--background;
+    .flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
+    min-height: 80px;
+    background-color: @color-swatch3;
+    // Tablet: reduce height
 }
 
 .profile-header,
 .logo-banner {
-    background-color: @color__container--background;
+    background-color: @color-swatch7;
     @media @tablet {
         text-align: center;
     }
@@ -201,24 +198,24 @@
 // ------
 
 .template-footer {
-	min-height: 100px;
-	background-color: @color__footer--background;
-	text-align: center;
-	color: #ffffff;
-	// Change heading elements to white
-	h1, h2, h3, h4 {
-		color: #ffffff;
-	}
-	// Lighten paragraph & link elements
-	p, a {
-		color: #ffffff;
-		padding: 0;
-	}
-	// Reset Twitter feed styles
-	.twitter-feed {
-		padding: 0;
-		background-color: transparent;
-	}
+    min-height: 100px;
+    background-color: @color-swatch3;
+    text-align: center;
+    color: #ffffff;
+    // Change heading elements to white
+    h1, h2, h3, h4 {
+        color: #ffffff;
+    }
+    // Lighten paragraph & link elements
+    p, a {
+        color: #ffffff;
+        padding: 0;
+    }
+    // Reset Twitter feed styles
+    .twitter-feed {
+        padding: 0;
+        background-color: transparent;
+    }
     .container {
         width: 100%;
     }
@@ -276,9 +273,9 @@ a {
 // ----------
 
 blockquote:before {
-	margin-right: 10px;
-	font-size: 32px;
-	color: @color-swatch3;
+    margin-right: 10px;
+    font-size: 32px;
+    color: @color-swatch3;
     display: inline-block;
     float: left;
 }
@@ -356,20 +353,20 @@ form,
 
 // Form Body
 .form-body {
-	margin: 10px 0 20px;
+    margin: 10px 0 20px;
     position: relative;
     z-index: 9999;
-	@media @mobile {
-		margin: 20px;
-	}
+    @media @mobile {
+        margin: 20px;
+    }
 }
 
 // Form Group
 .form-group {
-	margin-bottom: 20px;
-	@media @mobile {
-		margin-bottom: 10px;
-	}
+    margin-bottom: 20px;
+    @media @mobile {
+        margin-bottom: 10px;
+    }
 }
 
 
@@ -377,12 +374,12 @@ form,
 // ----------
 
 legend {
-	width: 100%;
-	padding: 30px 30px;
-	color: @color__h4--text;
-	@media @mobile {
-		padding: 6px 20px;
-	}
+    width: 100%;
+    padding: 30px 30px;
+    color: @color__h4--text;
+    @media @mobile {
+        padding: 6px 20px;
+    }
 }
 
 // Select
@@ -399,7 +396,7 @@ select {
     &:hover, &:focus {
         background-color: @color-swatch1;
         cursor: pointer;
-	}
+    }
 }
 
 .signupform__legend {
@@ -503,13 +500,26 @@ button,
 // Gallery & Slideshow
 .image-title,
 .image-description {
-	color: @color-swatch1;
+    color: @color-swatch1;
 }
 
 // Image Widget
 .image-widget__caption { margin: 10px 0; }
 .image-widget__image-title,
 .image-widget__image-description {
-	color: @color__p--text;
-	text-shadow: none;
+    color: @color__p--text;
+    text-shadow: none;
+}
+
+
+
+
+// -----------------------------
+// Responsive Columns
+// -----------------------------
+
+.responsivecolumns {
+    .signupform__form-group {
+        margin-bottom: 0;
+    }
 }
