@@ -92,7 +92,7 @@
 // 3.  #Navigation
 // -----------------------------
 
-// Folder Item Parent: Gives arrow 
+// Folder Item Parent: Gives arrow
 .item-name--parent:after {
     display: inline-block;
     vertical-align: middle;
@@ -195,7 +195,7 @@
             line-height:@font__p--line-height;
             letter-spacing: @font__p--letter-spacing;
         }
-    }  
+    }
 }
 
 // Gallery Images
@@ -333,7 +333,7 @@
     border: 1px solid @color-swatch7;
     padding: 10px;
     margin: 0;
-    .image-title, 
+    .image-title,
     .image-description {
         color: @color__feature-headline--text;
         text-shadow: none;
@@ -408,12 +408,26 @@
 
 // -----------------------------
 // 6.  #Slideshow
-// ----------------------------- 
+// -----------------------------
 
 // Homepage Slideshow Height
-.responsiveslideshow, 
+.responsiveslideshow,
 .responsiveslideshow__figure {
     position: relative;
+}
+
+.slides-list.cover,
+.responsiveslideshow .cover .responsiveslideshow__figure {
+    position: relative;
+    height: 400px;
+}
+
+.contain .image {
+    max-height: 700px;
+
+    @media @tablet {
+        max-height: 500px;
+    }
 }
 
 .homepage-slideshow .responsiveslideshow__figure {
@@ -427,13 +441,13 @@
 // ----------------
 
 // Slideshow Height
-.homepage-slideshow .responsiveslideshow, 
+.homepage-slideshow .responsiveslideshow,
 .homepage-slideshow .responsiveslideshow__figure {
     position: relative;
     min-height: 0;
 }
 
-.responsiveslideshow__slideshow-controls, 
+.responsiveslideshow__slideshow-controls,
 .responsiveslideshow__caption {
     text-align: center;
     margin-top: 15px;
@@ -447,12 +461,6 @@
 .responsiveslideshow__figure {
     background-size: cover;
     background-position: center;
-    padding-bottom: 60%;
-}
-
-// Hide Img Element
-.responsiveslideshow__image {
-    display: none;
 }
 
 .homepage-slideshow .responsiveslideshow__image {
@@ -497,32 +505,70 @@
 // Navigation Buttons
 .slide-navigation {
     position: absolute;
-    top: 50%;
-    width: 100%;
-    margin-top: -24px;
-}
-
-.previous-button {
-    float: left;
-}
-
-.next-button {
-    float: right;
-}
-
-.pause-toggle {
-    position: absolute;
-    left: 0;
+    top: 0;
     right: 0;
-    top: 50%;
-    bottom: 0;
-    margin: 0px auto;
-    width: 110px;
-    margin-top: -24px;
-    height: 50px;
+}
+
+
+.pause-toggle,
+.next-button,
+.previous-button {
+    padding: 0;
+    width: 55px;
+    height: 48px;
+
     @media @tablet {
-        width: 70px;
+        height: 36px;
+        width: 40px;
     }
+}
+
+.no-touch .responsiveslideshow {
+
+    // Navigation Buttons
+    .slide-navigation {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        margin-top: -24px;
+    }
+
+    .previous-button {
+        float: left;
+    }
+
+    .next-button {
+        float: right;
+    }
+
+
+    .pause-toggle {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        bottom: 0;
+        margin: 0px auto;
+        width: 110px;
+        margin-top: -24px;
+        height: 50px;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+
+        @media @tablet {
+            width: 70px;
+        }
+    }
+
+    &:hover .pause-toggle {
+        opacity: 1;
+    }
+}
+
+// Forces play / pause to show in edit mode
+.edit .slide-navigation .pause-toggle {
+    opacity: 1;
+    visibility: visible;
 }
 
 .responsiveslideshow__pause-toggle {
@@ -543,19 +589,12 @@
 
 .button--pagination.responsiveslideshow__button {
     vertical-align: top;
-    padding: 5px 20px;
     margin-bottom: 5px;
 }
 
 .responsiveslideshow .pagination-item.selected .button--pagination {
     background-color: @color-swatch2;
-    color: @font-swatch7-color; 
-}
-
-.responsiveslideshow__next-button, 
-.responsiveslideshow__previous-button, 
-.responsiveslideshow__pause-toggle {
-    padding: 10px 20px;
+    color: @font-swatch7-color;
 }
 
 .responsiveslideshow .figure {
@@ -578,8 +617,8 @@
 //  7.2  #TWEET, PAYPAL, DROPBOX
 //  --------------
 
-.tweet__button, 
-.paypalbuynow__button, 
+.tweet__button,
+.paypalbuynow__button,
 .dropbox__button.js-link-btn {
     min-width: 160px;
     text-align: center;
@@ -609,7 +648,7 @@
 .clicktocall__phone-number-link {
     &:hover {
         text-decoration: none;
-    }   
+    }
 }
 
 .phone-number-link {
@@ -636,7 +675,7 @@
 //  7.4 #SLIDESHOW
 //  --------------
 
-.responsiveslideshow__next-button, 
+.responsiveslideshow__next-button,
 .responsiveslideshow__previous-button,
 .responsiveslideshow__pause-toggle {
     background-color: @color-swatch3;
@@ -671,7 +710,7 @@
 
 // Inputs
 input.input[type=email],
-input.input[type=search], 
+input.input[type=search],
 .contact-form__textarea {
     -webkit-appearance: none;
     border-radius: 0;
@@ -698,7 +737,7 @@ input.input[type=search],
     }
 }
 
-.option-item--radio, 
+.option-item--radio,
 .option-item--checkbox {
     display: block;
 }
@@ -908,8 +947,8 @@ input.input[type=search],
     .socialicons__social-item:hover {
         transform: initial;
     }
-    input.input[type=email], 
-    input.input[type=search], 
+    input.input[type=email],
+    input.input[type=search],
     .contact-form__textarea {
         color: @color__p--text;
     }
@@ -938,7 +977,7 @@ input.input[type=search],
         }
     }
     .companyaddress__address-line {
-        float: left; 
+        float: left;
         margin-right: 10px;
         @media @mobile {
             float: initial;
@@ -1061,7 +1100,7 @@ input.input[type=search],
     .profile__companyaddress {
         .clearfix;
     }
-} 
+}
 
 
 
