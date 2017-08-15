@@ -418,9 +418,19 @@
 
 .homepage-slideshow {
 
-    .slides-list,
-    .responsiveslideshow .responsiveslideshow__figure {
+    .slides-list.cover,
+    .responsiveslideshow .cover .responsiveslideshow__figure {
         height: 550px;
+
+        @media @tablet {
+            height: 400px;
+        }
+    }
+
+    .slide-list.contain,
+    .responsiveslideshow .contain .responsiveslideshow__figure {
+        min-height: 0;
+        max-height: 550px;
 
         @media @tablet {
             max-height: 400px;
@@ -458,13 +468,6 @@
 // Slideshow Layout
 // ----------------
 
-// Slideshow Height
-.homepage-slideshow .responsiveslideshow,
-.homepage-slideshow .responsiveslideshow__figure {
-    position: relative;
-    min-height: 0;
-}
-
 .responsiveslideshow__slideshow-controls,
 .responsiveslideshow__caption {
     text-align: center;
@@ -494,6 +497,7 @@
     bottom: 140px;
     width: 100%;
     padding: 20px;
+
     @media @mobile {
         display: none;
     }
@@ -522,9 +526,21 @@
 
 // Navigation Buttons
 .slide-navigation {
+    margin: 0;
     position: absolute;
     top: 0;
     right: 0;
+
+    @media only screen and (max-width: 1024px) {
+        .flex-display;
+        .align-items(flex-start);
+        .justify-content(flex-end);
+        height: ~"calc(100% - 37px)";
+        margin-top: 0;
+        right: 0;
+        top: 0;
+        width: auto;
+    }
 }
 
 
@@ -535,9 +551,20 @@
     width: 55px;
     height: 48px;
 
+    @media only screen and (max-width: 1024px) {
+        background-color: fade(@color__button--background, 25%);
+    }
+
     @media @tablet {
         height: 36px;
         width: 40px;
+    }
+}
+
+.pause-toggle {
+    @media only screen and (max-width: 1024px) {
+        position: relative;
+        width: 55px;
     }
 }
 
@@ -546,9 +573,27 @@
     // Navigation Buttons
     .slide-navigation {
         position: absolute;
-        top: 50%;
+        top: ~"calc(50% - 37px)";
         width: 100%;
-        margin-top: -24px;
+
+        @media only screen and (max-width: 1024px) {
+            .flex-display;
+            .align-items(flex-start);
+            .justify-content(flex-end);
+            height: ~"calc(100% - 37px)";
+            right: 0;
+            top: 0;
+            width: auto;
+        }
+    }
+
+    .previous-button,
+    .next-button,
+    .pause-toggle {
+
+        @media only screen and (max-width: 1024px) {
+            background-color: fade(@color__button--background, 25%);
+        }
     }
 
     .previous-button {
@@ -564,22 +609,30 @@
         position: absolute;
         left: 0;
         right: 0;
-        top: 50%;
         bottom: 0;
         margin: 0px auto;
         width: 110px;
-        margin-top: -24px;
-        height: 50px;
-        opacity: 0;
+        height: 48px;
+        opacity: 1;
         transition: opacity 0.5s ease;
 
-        &.pause,
-        &.visible {
-            opacity: 1;
+        @media only screen and (max-width: 1024px) {
+            position: relative;
+            top: 0;
+            width: 55px;
         }
 
         @media @tablet {
-            width: 70px;
+            height: 36px;
+            width: 40px;
+        }
+
+        &.pause {
+            opacity: 0;
+
+            @media only screen and (max-width: 1024px) {
+                opacity: 1;
+            }
         }
     }
 
@@ -589,7 +642,7 @@
 }
 
 // Forces play / pause to show in edit mode
-.edit .slide-navigation .pause-toggle {
+.edit .responsiveslideshow .slide-navigation .pause-toggle {
     opacity: 1;
     visibility: visible;
 }
