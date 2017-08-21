@@ -995,6 +995,7 @@ input.input[type=search],
         display: table;
         width: 80%;
         z-index: 1;
+        margin: 0;
         @media @mobile {
             margin: 20px auto 10px;
         }
@@ -1041,6 +1042,9 @@ input.input[type=search],
             width: 100%;
             margin-bottom: 10px;
         }
+    }
+    .form-group.js-recaptcha {
+        margin-bottom: 0;
     }
     .profile__map {
         margin-bottom: 10px;
@@ -1130,9 +1134,10 @@ hr.rule {
     input {
         padding-top: 10px;
     }
-    form:after, 
-    .form:after {
-        position: relative;
-        border: 0;
+    form,
+    .form {
+    &:after {
+        position: relative!important;
+        border: 0!important;
     }
 }
