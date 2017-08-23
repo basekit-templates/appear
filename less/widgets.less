@@ -32,6 +32,7 @@
 // 15.   #YELP
 // 16.   #MAP
 // 17.   #HR LINE
+// 18.   #WIDGET EMBED
 
 
 // -----------------------------
@@ -42,6 +43,7 @@
     margin-right: 10px;
     @media @tablet {
         margin-right: 0;
+        margin-bottom: 10px;
     }
 }
 
@@ -468,7 +470,7 @@
     width: 100%;
     padding: 20px;
     @media @mobile {
-        display: none;
+        position: relative!important;
     }
 }
 
@@ -993,6 +995,7 @@ input.input[type=search],
         display: table;
         width: 80%;
         z-index: 1;
+        margin: 0;
         @media @mobile {
             margin: 20px auto 10px;
         }
@@ -1003,6 +1006,7 @@ input.input[type=search],
         float: right;
         @media @tablet {
             float: initial;
+            width: 100%;
         }
         @media @mobile {
             min-width: 250px;
@@ -1020,6 +1024,9 @@ input.input[type=search],
         padding: 2px 40px;
         width: 100%;
         float: right;
+        @media @tablet {
+            padding: 6px 40px 5px;
+        }
     }
     .signupform__form-group {
         margin-bottom: 0;
@@ -1035,6 +1042,9 @@ input.input[type=search],
             width: 100%;
             margin-bottom: 10px;
         }
+    }
+    .form-group.js-recaptcha {
+        margin-bottom: 0;
     }
     .profile__map {
         margin-bottom: 10px;
