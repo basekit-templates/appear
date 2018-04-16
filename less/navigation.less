@@ -175,6 +175,7 @@
 
 @media @tablet {
     .navigation-toggle {
+	background-color: @color__navigation--background;
         display: block;
         overflow: hidden;
         width: 100%;
@@ -196,7 +197,7 @@
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
-            background: @color__button--text;
+            background: contrast(@color__navigation--background);
             box-shadow: 0 6px 0 @color__button--text;
             .transition( all, 0.5s, ease );
         }
@@ -210,27 +211,27 @@
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
-            background: @color__button--text;
+            background: contrast(@color__navigation--background);
             .transition( all, 0.5s, ease );
         }
     }
     .navigation-toggle:hover {
         border: 0;
             &:before {
-                background: @color__button--text;
+                background: contrast(@color__navigation--background);
                 box-shadow: 0 6px 0 @color__button--text;
             }
             &:after {
-                background: @color__button--text;
+                background: contrast(@color__navigation--background);
             }
     }
     // Toggle Button Open State
     .open & {
         &.navigation-toggle {
-            background-color: @color-swatch3;
+            background-color: @color__navigation--background;
             &:before {
                 margin-top: 21px;
-                background: @color__button--text;
+                background: contrast(@color__navigation--background);
                 box-shadow: none;
                 -webkit-transform: rotate(45deg);
                 -moz-transform: rotate(45deg);
@@ -249,7 +250,7 @@
                 right: 0;
                 margin-top: 21px;
                 margin-left: -13px;
-                background: @color__button--text;
+                background: contrast(@color__navigation--background);
                 box-shadow: none;
                 -webkit-transform: rotate(-45deg);
                 -moz-transform: rotate(-45deg);
