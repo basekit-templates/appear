@@ -216,6 +216,7 @@
             "color__navigation--text": "@font-swatch6-color",
             "color__navigation--text--hover": "darken(@font-swatch6-color,40%)",
             "color__navigation--text--selected": "darken(@font-swatch6-color,40%)",
+            "color__navigation-list--background": "lighten(@color-swatch3, 20%)",
             "font__navigation--font-family" : "@font-swatch6-font-family",
             "font__navigation--font-size" : "@font-swatch6-font-size",
             "font__navigation--font-weight" : "@font-swatch6-font-weight",
