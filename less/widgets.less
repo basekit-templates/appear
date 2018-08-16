@@ -900,7 +900,6 @@ input.input[type=search],
 
 .widgetprofile-right {
     text-align: right;
-    padding-top: 10px;
     .clearfix;
     @media @tablet {
         text-align: center;
@@ -910,20 +909,22 @@ input.input[type=search],
         @media @tablet {
             float: none;
             margin: 0px auto;
-            display: table;
+            width: 100%;
         }
     }
     .companyaddress__address-line {
-        float: left;
         margin-right: 10px;
-        @media @mobile {
-            float: initial;
-        }
+        padding-bottom: 0;
     }
     .companyaddress__address-line p {
         @media @tablet {
             margin-bottom: 0;
         }
+    }
+    .companyheadline__headline,
+    .companybusiness__business,
+    .companycopyright__copyright {
+        padding-bottom: 0;
     }
     .twitter__avatar {
         float: right;
@@ -940,6 +941,9 @@ input.input[type=search],
         @media @tablet {
             padding-right: 0;
         }
+    }
+    .profile__map {
+        margin-bottom: 0;
     }
     .twitter__tweet-item {
         max-width: 50%;
@@ -967,38 +971,28 @@ input.input[type=search],
         }
     }
     .signupform__form-body {
-        display: table;
-        width: 80%;
-        z-index: 1;
+        .flex-display;
+        .align-items(center);
+        .justify-content(flex-end);
         margin: 0;
-        @media @mobile {
-            margin: 20px auto 10px;
+        width: 100%;
+        @media @tablet {
+            .justify-content(center);
         }
     }
     .profile__signupform {
-        width: 400px;
         display: block;
-        float: right;
-        @media @tablet {
-            float: initial;
-            width: 100%;
-        }
-        @media @mobile {
-            min-width: 250px;
-            max-width: 280px;
-            margin: 0px auto;
-        }
+    }
+    .signupform__legend,
+    .signupform__label {
+        display: none;
     }
     .signupform__input {
-        width: 100%;
-        float: left;
-        display: inline-block;
+        margin: 0!important;
         text-align: left;
     }
     .signupform__button {
         padding: 2px 40px;
-        width: 100%;
-        float: right;
         @media @tablet {
             padding: 6px 40px 5px;
         }
@@ -1007,27 +1001,8 @@ input.input[type=search],
         margin-bottom: 0;
         display: inline-block;
     }
-    .signupform__legend {
-        text-align: left;
-        display: inline-block;
-        width: 15%;
-        float: left;
-        @media @tablet {
-            text-align: center;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-    }
     .form-group.js-recaptcha {
         margin-bottom: 0;
-    }
-    .profile__map {
-        margin-bottom: 10px;
-    }
-    .profile__emailaddress,
-    .profile__companyphone,
-    .profile__companystrapline {
-        margin-top: -10px;
     }
     .socialicons__social-name {
         display: none;
@@ -1036,6 +1011,20 @@ input.input[type=search],
         @media @tablet {
             margin: 0px auto;
             display: table;
+        }
+    }
+    .profile__form-group--terms {
+        .flex-display;
+        .align-items(center);
+        .justify-content(flex-end);
+        margin: 0;
+        @media @tablet {
+            .justify-content(center);
+        }
+
+        label {
+            margin: 0;
+            font-size: 13px;
         }
     }
     .profile__companyaddress {

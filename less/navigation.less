@@ -133,7 +133,7 @@
 
 .navigation-list--children,
 .default-page .navigation-list--children {
-	background-color: lighten(@color-swatch3, 20%);
+	background-color: @color__navigation-list--background;
     z-index: 99999;
 	.navigation__item-name {
 		color:@color__feature-strapline--text;
@@ -150,6 +150,10 @@
 	}
 }
 
+.align-right .navigation-list--children {
+    left: initial;
+    right: 0;
+}
 
 [data-widget-type="extendednavigation"] {
 

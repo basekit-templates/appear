@@ -88,7 +88,6 @@ body {
 .header-wrapper {
 	width: 100%;
 	// Layout
-	padding: 10px 2%;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -119,9 +118,10 @@ body {
     align-items: center;
 	@media @tablet {
 		display: block;
-		padding: 15px 4% 15px;
 	}
 }
+
+
 
 
 // #Default Page
@@ -138,10 +138,23 @@ body {
 .template-title {
     width: 100%;
     text-align: center;
-    padding: 40px 20px;
     background-color: @color-swatch7;
-    @media @tablet {
-        padding: 20px;
+
+    &:empty,
+    .bk-tpl-hidden {
+        display: none;
+    }
+
+    [data-widget-type="pagetitle"] {
+        padding: 40px 20px;
+
+        @media @tablet {
+            padding: 20px;
+        }
+
+        h1 {
+            padding-bottom: 0;
+        }
     }
 }
 
