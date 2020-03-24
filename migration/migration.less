@@ -17,7 +17,20 @@
     }
 
 
+    .bk-pt-default .container {
+        padding: 0!important;
+    }
 
+
+    [data-name="row"] .gallery-list {
+        padding: 0;
+    }
+
+
+    [data-name="row"] .widget__twitter:after {
+        display: none;
+    }
+ 
 
     // Migration styles
     // -----------------------------
@@ -28,11 +41,10 @@
     #page-zones__main:empty,
     #page-zones__main > .widget:not([data-name="row"]),
     .row:not(.row--width-no-padding) .row__container {
-        max-width: 1200px;
+        max-width: ~'calc(1200px - 10%)';
         margin-left: auto;
         margin-right: auto;
-        padding-left: 5%;
-        padding-right: 5%;
+        width: 90%;
     }
     
     
@@ -48,10 +60,6 @@
     // Move spacing to last widget in the main zone (not sections)
     #page-zones__main > .widget:not([data-name="row"]):last-child {
         margin-bottom: 20px;
-
-        @media @tablet {
-            // margin-bottom: 1em;
-        }
     }
     
     
@@ -62,8 +70,8 @@
             display: none;
         }
         [data-name="signupform"] legend+.form-body {
-            display: flex;
-            align-items: center;
+            .flex-display;
+            .align-items(center);
         }
         .signupform__form-body {
             text-align: inherit;
@@ -83,8 +91,7 @@
     }
     .row--form-1a {
         .form-body {
-            justify-content:center;
+            .justify-content(center);
         }
     }
-
 }
